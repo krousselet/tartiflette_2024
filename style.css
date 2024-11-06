@@ -1,0 +1,195 @@
+/* GENERAL */
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.hover-red {
+    transition: .2s ease;
+}
+
+.hover-red:hover {
+    transition: .2s ease;
+    color: red;
+}
+
+.important {
+    text-decoration: underline;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.ghost {
+    opacity: 0;
+    animation: left 1.5s forwards;
+    right: 100%;
+    position: relative;
+}
+
+.ghost-one {
+    animation: left 1.5s .5s forwards;
+}
+
+.ghost-two {
+    animation: left 1.5s 1s forwards;
+}
+
+.hide {
+    opacity: 0;
+    animation: reveal .5s 1.5s forwards;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* KEYFRAMES */
+
+@keyframes left {
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    100% {
+        opacity: 1;
+    }
+}
+
+/*************** MOBILE *****************/
+
+/* HEADER */
+
+@media (min-width: 320px) and (max-width: 991px) {
+    header {
+        width: 100vw;
+        height: 70px;
+        display: flex;
+        margin: 15px auto;
+    }
+
+    header nav {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto !important;
+
+    }
+
+    header nav .image-container {
+        width: 33%;
+        height: 70px;
+        cursor: default;
+    }
+
+    header nav .image-container a {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    header nav .image-container a img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* main */
+
+    main {
+        flex-direction: column;
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    main .title {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    main .title .title-container {
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 10px auto;
+        overflow-x: hidden;
+    }
+
+    main .title .title-container h1 {
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    main .title .title-container h1 span {
+        font-family: "Bebas Neue", serif;
+        letter-spacing: 2px;
+    }
+
+    main .title .title-container p {
+        margin: 15px auto;
+    }
+
+    main .title .activities {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .swiper {
+        margin: 50px auto;
+        outline: 1px solid red;
+        border-radius: 7px;
+        box-shadow: 0 0 15px red;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-family: "Bebas Neue", serif;
+    }
+
+    .swiper-slide {
+        p {
+            font-size: 1.5em;
+            letter-spacing: 2px;
+        }
+    }
+
+    .space {
+        margin: 15px auto;
+    }
+
+    .tartiflette-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .tartiflette-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
