@@ -77,6 +77,22 @@ body {
     }
 }
 
+@keyframes hide {
+    70% {
+        opacity: 0;
+    }
+
+    80% {
+        display: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
 /*************** MOBILE *****************/
 
 /* HEADER */
@@ -120,6 +136,7 @@ body {
         flex-direction: column;
         width: 100%;
         margin: 50px auto;
+        animation: hide 1s 3s forwards !important;
     }
 
     main .title {
@@ -165,9 +182,11 @@ body {
         box-shadow: 0 0 15px red;
     }
 
+
     .swiper-slide {
         text-align: center;
         font-family: "Bebas Neue", serif;
+        animation: hide 1s 4.5s forwards !important;
     }
 
     .swiper-slide {
@@ -185,6 +204,7 @@ body {
         width: 250px;
         height: 250px;
         margin: 0 auto;
+        animation: hide 1s 4s forwards !important;
     }
 
     .tartiflette-container img {
@@ -307,4 +327,54 @@ body {
         height: 100%;
         border-radius: 50%;
     }
+
+    .cancel img+div {
+        width: 100%;
+        height: 90%;
+        text-align: center;
+        font-family: "Bebas Neue", serif;
+        letter-spacing: 1px;
+        font-size: 2rem;
+    }
+}
+
+main {
+    animation: hide 1s 3s forwards !important;
+}
+
+.cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    animation: reveal 1s 5s forwards;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.cancel img {
+    width: 100%;
+    height: 90%;
+}
+
+.cancel img+div {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 1px;
+}
+
+.swiper {
+    opacity: 1;
+    animation: hide 1s 4s forwards !important;
+}
+
+.tartiflette-container {
+    animation: hide 1s 4s forwards !important;
 }
